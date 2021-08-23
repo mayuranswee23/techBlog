@@ -5,12 +5,12 @@
             
         </div>
     </div>
-        <div class="row new-post-box">
-            <form class="col-7 new-post-form">
-                <label for="surv-name">Enter your Title  </label>
-                <input type="text" name="post-name" id="post-title" class="form-control" value="{{post.postname}}"/>
+        <div class="row update-post-box">
+            <form class="col-7 update-post-form">
+                <label for="post-title">Enter your Title  </label>
+                <input type="text" name="post-title" id="post-title" class="form-control" value="{{post.postname}}"/>
                 <label for="post-content">Content </label>
-                <input type="text" id="post-content" class="form-control" value="{{post.postcontent}}"/>
+                <input type="text" name="content" id="post-content" class="form-control" value="{{post.postcontent}}"/>
                
             </form>
             <div class="save-post">
