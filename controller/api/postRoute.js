@@ -40,6 +40,9 @@ router.get('/:id', (req, res)=> {
 
   //create a post
   router.post('/', (req, res)=> {
+      console.log(req.body.title);
+      console.log(req.body.content);
+      console.log(req.session.user_id)
       Post.create({
           title: req.body.title,
           content: req.body.content, 

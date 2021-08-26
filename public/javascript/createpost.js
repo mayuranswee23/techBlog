@@ -15,11 +15,11 @@ async function newPostHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/single-post');
       } else {
         alert(response.statusText);
       }
     }
   }
 
-  document.querySelector('#save-post-button').addEventListener('submit', newPostHandler);
+  document.querySelector('#save-post-btn').addEventListener('click', newPostHandler);
