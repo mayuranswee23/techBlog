@@ -58,7 +58,7 @@ router.get('/post/:id', (req, res)=> {
           return;
         }
         const post = Data.map(post => post.get({ plain: true }));
-        res.render('single-post', {post});
+        res.render('homepage', {post});
       })
       .catch((err) => {
         console.log(err);
@@ -71,6 +71,13 @@ router.get('/logout', (req, res) => {
     res.render('homepage');
 });
 
+router.get('/showpost', (req, res) => {
+    res.render('single-post');
+});
+
+router.get('/updatepost', (req, res) => {
+    res.render('updatepost');
+});
 
 
 module.exports = router;

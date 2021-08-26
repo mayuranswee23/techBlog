@@ -2,16 +2,17 @@
     <div class="title">
         <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
         <span>({{post.post_url}})</span>
+        <div></div>
     </div>
     <div class="meta">
        Created by {{post.user.username}} on 
         {{post.created_at}}
         |
-        <a href="/post/{{post.id}}">{{post.comment.length}} Comments</a>
+        <a href="/post/{{post.id}}">{{post.comments.length}} Comments</a>
     </div>
 </article>
 
-{{#if loggedIn}}
+{{!-- {{#if loggedIn}} --}}
 <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
@@ -21,7 +22,7 @@
     <button type="submit">Add Comment</button>
   </div>
 </form>
-{{/if}}
+{{!-- {{/if}} --}}
 
 <div class="comments">
   {{#each post.comments}}
@@ -38,3 +39,4 @@
 
 <script src="/javascript/createpost.js"></script>
 <script src="/javascript/updatepost.js"></script>
+<script src="/javascript/comment.js"></script>
