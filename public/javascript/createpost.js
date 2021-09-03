@@ -15,7 +15,7 @@ async function newPostHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/single-post');
+        document.location.replace('/');
       } else {
         alert(response.statusText);
       }

@@ -79,5 +79,8 @@ router.get('/updatepost', (req, res) => {
     res.render('updatepost');
 });
 
+router.get('/comments', (req, res) => {
+    res.render('homepage');
+});
 
 module.exports = router;

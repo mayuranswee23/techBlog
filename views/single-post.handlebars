@@ -8,14 +8,14 @@
        Created by {{post.user.username}} on 
         {{post.created_at}}
         |
-        <a href="/post/{{post.id}}">{{post.comments.length}} Comments</a>
+        <div>{{post.comments.length}} Comments</div>
     </div>
 </article>
 
 {{!-- {{#if loggedIn}} --}}
-<form class="comment-form">
+<form ID="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea id="comment-body"></textarea>
   </div>
 
   <div>
