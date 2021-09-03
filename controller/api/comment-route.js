@@ -43,12 +43,13 @@ router.get('/:id', (req, res)=> {
   //create a comment
   router.post('/', (req, res)=> {
       Comment.create({
-          comment: req.body.comment_text,
+          comment_text: req.body.body,
           user_id: req.session.user_id,
           post_id: req.body.post_id,
       }).then((Data) => {
         res.json(Data);
       }).catch((err) => {
+        console.log(err)
         res.status(500).json(err);
       });
   });

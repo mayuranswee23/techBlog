@@ -66,12 +66,32 @@ router.get('/post/:id', (req, res)=> {
       });
   });
 
+  router.get('post/:id', (req, res)=> {
+    Comment.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: ['id', 'comment_text', 'user_id', 'post_id'], 
+    })  .then((Data) => {
+        if (!Data) {
+          res.status(404).json({ message: 'No comment found with this id' });
+          return;
+        }
+        const comment = Data.map(comment => comment.get({ plain: true }));
+        res.render('single-post', {comment});
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
 
 router.get('/logout', (req, res) => {
     res.render('homepage');
 });
 
-router.get('/showpost', (req, res) => {
+router.get('/:id', (req, res) => {
     res.render('single-post');
 });
 
@@ -80,7 +100,7 @@ router.get('/updatepost', (req, res) => {
 });
 
 router.get('/comments', (req, res) => {
-    res.render('homepage');
+    res.render('single-post');
 });
 
 module.exports = router;
