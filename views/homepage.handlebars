@@ -9,8 +9,9 @@
         {{!-- <span>({{post.post_url}})</span> --}}
       </div>
       <div class="meta">
-       Created by {{username}} on
-        {{post.created_at}}
+       Created by {{post.user_id}} 
+       Post:
+        {{post.content}}
         |
         <div>{{post.comments.length}} comment(s)</div>
         <div><a href="/updatepost/{{post.id}}"> Update Post</a></div>

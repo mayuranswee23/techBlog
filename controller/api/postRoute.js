@@ -46,7 +46,8 @@ router.get('/:id', (req, res)=> {
       Post.create({
           title: req.body.title,
           content: req.body.content, 
-          user_id: req.session.user_id
+          user_id: req.session.user_id,
+          username: req.session.username
       }).then((Data) => {
         res.json(Data);
       }).catch((err) => {
