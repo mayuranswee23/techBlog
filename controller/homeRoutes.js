@@ -58,7 +58,7 @@ router.get('/post/:id', (req, res)=> {
           return;
         }
         const post = Data.map(post => post.get({ plain: true }));
-        res.render('homepage', {post});
+        res.render('single-post', {post});
       })
       .catch((err) => {
         console.log(err);
@@ -66,7 +66,7 @@ router.get('/post/:id', (req, res)=> {
       });
   });
 
-  router.get('post/:id', (req, res)=> {
+  router.get('/:id', (req, res)=> {
     Comment.findOne({
         where: {
             id: req.params.id
@@ -77,7 +77,7 @@ router.get('/post/:id', (req, res)=> {
           res.status(404).json({ message: 'No comment found with this id' });
           return;
         }
-        const comment = Data.map(comment => comment.get({ plain: true }));
+        const comment = Data.get({ plain: true });
         res.render('single-post', {comment});
       })
       .catch((err) => {
