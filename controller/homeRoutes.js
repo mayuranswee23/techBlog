@@ -88,7 +88,7 @@ router.get('/post/:id', (req, res)=> {
 
 
 router.get('/logout', (req, res) => {
-    res.render('homepage');
+    res.render('logout');
 });
 
 router.get('/:id', (req, res) => {
@@ -100,7 +100,7 @@ router.get('/updatepost', (req, res) => {
 });
 
 router.get('/comments', (req, res) => {
-    res.render('single-post');
+    res.render('logout');
 });
 
 module.exports = router;

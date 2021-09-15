@@ -2,14 +2,16 @@
   {{#each posts as |post|}}
   <li>
     <article class="post">
-      <div class="title">
+      <h2 class="title">
         {{!-- <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
         <span>({{post.post_url}})</span> --}}
         <a href="/{{post.id}}" target="_blank">{{post.title}}</a>
         {{!-- <span>({{post.post_url}})</span> --}}
-      </div>
+      </h2>
       <div class="meta">
+        
        Created by {{post.user_id}} 
+       
        Post:
         {{post.content}}
         |

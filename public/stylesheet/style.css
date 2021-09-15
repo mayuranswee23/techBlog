@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
-    color: black
+    color: black;
+    font-family: Verdana;
 }
 
 body{
@@ -10,13 +11,50 @@ body{
     color: #343
 }
 
-.title{
-    color: red;
-    font-size: 20px; 
+.mainheader{
+    background-color: red;
+    font-size: 35px; 
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.mainheader a{
+    text-decoration: none;
 }
 
 textarea, input {
     padding: .5%;
     border-radius: 5px;
     border: 1px solid #ccc;
+  }
+
+  button {
+      background-color: red;
+      font-weight: bold; 
+      color: white;
+  }
+
+  .navigation {
+      text-decoration: none;
+      display: flex; 
+      justify-content: space-around;
+  }
+
+  .navigation a {
+      text-decoration: none; 
+  }
+
+  .post-list{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  .post{
+      border: solid black 0.2rem; 
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      background-color: pink;
+      border-radius: 0.5rem;
   }

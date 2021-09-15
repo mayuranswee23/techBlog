@@ -11,13 +11,13 @@
 <body>
   <div class="wrapper">
     <header>
-      <h1>
+      <h1 class="mainheader">
         <a href="/">Tech Blog News</a>
       </h1>
         <nav class="navigation">
           <a href="/createpost"> Create A Post</a>
           <a href="/login"> Login</a>
-          <a href="/logout"> Logout</a>
+          <a href="/logout" id="logout"> Log Out</a>
           {{!-- <a href="/updatepost"> Update Posts</a> --}}
         </nav>
         {{!-- <nav>
@@ -36,9 +36,9 @@
     </footer>
   </div>
 
-{{#if loggedIn}}
+
 <script src="/javascript/logout.js"></script>
-{{/if}}
+
 </body>
 
 </html>

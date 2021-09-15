@@ -20,7 +20,7 @@ async function commentFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace(`/comments`);
+        document.location.reload();
       } else {
         alert(response.statusText);
       }
