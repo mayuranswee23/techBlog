@@ -1,6 +1,7 @@
 # techBlog
 
-![image](https://user-images.githubusercontent.com/81788122/133654817-89525094-0d07-44be-8479-5674b0eb02ce.png)
+![image](https://user-images.githubusercontent.com/81788122/133654971-a1eaf733-ce77-4ac4-8f5a-2f0304cb00c6.png)
+
 
 
 # Description 
