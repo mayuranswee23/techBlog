@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const {Post, User, Comment} = require('../../models');
+const withAuth = require('../../utils/auth');
 
 //get all of the posts
 router.get('/', (req, res)=> {
@@ -39,7 +40,7 @@ router.get('/:id', (req, res)=> {
   });
 
   //create a post
-  router.post('/', (req, res)=> {
+  router.post('/', withAuth, (req, res)=> {
       console.log(req.body.title);
       console.log(req.body.content);
       console.log(req.session.user_id)

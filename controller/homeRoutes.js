@@ -25,10 +25,10 @@ router.get('/', (req, res) => {
 
 //login 
 router.get('/login', (req, res) => {
-    // if (req.session.loggedIn){
-    //     res.redirect('/login');
-    //     return;
-    // }
+    if (req.session.loggedIn){
+        res.redirect('/login');
+        return;
+    }
     res.render('login');
 });
 
@@ -91,16 +91,16 @@ router.get('/logout', (req, res) => {
     res.render('logout');
 });
 
-router.get('/:id', (req, res) => {
-    res.render('single-post');
-});
+// router.get('/:id', (req, res) => {
+//     res.render('single-post');
+// });
 
-router.get('/updatepost', (req, res) => {
-    res.render('updatepost');
-});
+// router.get('/updatepost', (req, res) => {
+//     res.render('updatepost');
+// });
 
-router.get('/comments', (req, res) => {
-    res.render('logout');
-});
+// router.get('/comments', (req, res) => {
+//     res.render('logout');
+// });
 
 module.exports = router;
