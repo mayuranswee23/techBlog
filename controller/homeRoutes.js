@@ -66,6 +66,14 @@ router.get('/post/:id', (req, res)=> {
       });
   });
 
+  router.get('/logout', (req, res) => {
+    res.render('logout');
+});
+
+router.get('/updatepost', (req, res) => {
+    res.render('updatepost');
+});
+
   router.get('/:id', (req, res)=> {
     Comment.findOne({
         where: {
@@ -87,9 +95,9 @@ router.get('/post/:id', (req, res)=> {
   });
 
 
-router.get('/logout', (req, res) => {
-    res.render('logout');
-});
+// router.get('/logout', (req, res) => {
+//     res.render('logout');
+// });
 
 // router.get('/:id', (req, res) => {
 //     res.render('single-post');

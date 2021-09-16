@@ -6,7 +6,7 @@ async function updatePostHandler(event) {
     const post_id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
-    const response = await fetch(`/api/posts/${post_id}`, {
+    const response = await fetch(`/api/posts/updatepost`, {
       method: 'PUT',
       body: JSON.stringify({
         title,
@@ -39,5 +39,5 @@ async function updatePostHandler(event) {
      }
   };
 
-  document.querySelector('#save-post-btn').addEventListener('submit', updatePostHandler);
-  document.querySelector('#delete-post-btn').addEventListener('submit', deletePostHandler);
+  document.getElementbyId('#save-post-btn').addEventListener('submit', updatePostHandler);
+  document.getElementbyId('#delete-post-btn').addEventListener('submit', deletePostHandler);

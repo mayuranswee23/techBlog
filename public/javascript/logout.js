@@ -4,11 +4,11 @@ async function logout() {
       headers: { 'Content-Type': 'application/json' }
     });
   
-    if (response.ok) {
-      alert('you have logged out');
-    } else {
-      alert(response.statusText);
-    }
+  //   if (response.ok) {
+  //     alert('you have logged out');
+  //   } else {
+  //     alert(response.statusText);
+  //   }
   }
   
   document.querySelector('#logout').addEventListener('click', logout);
