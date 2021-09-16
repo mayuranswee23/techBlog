@@ -1,6 +1,7 @@
 # techBlog
 
-![image](https://user-images.githubusercontent.com/81788122/132081020-c38cacb0-2d3e-4a1d-80fd-b4a00ff231ec.png)
+![image](https://user-images.githubusercontent.com/81788122/133654817-89525094-0d07-44be-8479-5674b0eb02ce.png)
+
 
 # Description 
 This project involves using handlesbars.js, express.js and several other dependencies to create a tech blog application where users can login and create tech-related posts. The posts are displayed on the homepage, where other users can view the post and leave comments on their favourite posts. CRUD methods are used to retrive, create, update and delete posts and comments. 
