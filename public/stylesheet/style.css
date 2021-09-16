@@ -12,7 +12,7 @@ body{
 }
 
 .mainheader{
-    background-color: red;
+    background-color: green;
     font-size: 35px; 
     color: white;
     text-decoration: none;
@@ -30,7 +30,7 @@ textarea, input {
   }
 
   button {
-      background-color: red;
+      background-color: green;
       font-weight: bold; 
       color: white;
   }
@@ -55,6 +55,32 @@ textarea, input {
       border: solid black 0.2rem; 
       padding: 1rem;
       margin-bottom: 0.5rem;
-      background-color: pink;
+      background-color: lightgreen;
       border-radius: 0.5rem;
+  }
+
+  .login-form, .signup-form{
+      border: solid black 0.2rem;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+  }
+
+  #email-login, #password-login{
+    margin: 0.5rem; 
+    align-content: center;
+  }
+
+  #email-signup, #username-signup, #password-signup {
+      margin: 0.5rem;
+  }
+
+  #new-post-form{ 
+    border: solid 0.2rem black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
   }
